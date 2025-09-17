@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Data Vis Assignment 1</title>
+	<link rel="stylesheet" href="https://dig.cmu.edu/datavis-fall-2024/assignments/report.css" />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vega@6.1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.3.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
+	<script type="module" src="script.js"></script> -->
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 1</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Kim Credit</strong> — <em>kcredit@andrew.cmu.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Dataset: Fatal Overdoses in Allegheny County </h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>What drugs are the greatest contributors to trends in accidental overdose.</li>
+				<a href="https://www.nytimes.com/2022/05/11/us/politics/overdose-deaths-fentanyl-meth.html">link</a>
+				<li>How does public perception of a cricis align with the data? Is it proportional?</li>
+				<li>How does age factor into trends in drug use. Articles say teens and young adults engaging in less recreational drug use. Is this reflected the data about drug deaths, or does that only apply to more casual use? </li>
+				<a href="https://www.nytimes.com/2024/04/06/health/teens-drugs-alcohol-nicotine.html">link</a>
+				<li>How gendered is drug use or overdose?</li>
+				<l1>Geographic breakdown of the region and overdose numbers</l1>
+
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img width="800" src="images/image-01-overview.png" alt="bar chart of accidental deaths by year in aleghany county" />
+				<figcaption>
+				Data Overview: Accidental Overdoses by Year
+				<p>I began by getting an overview of the data, comparing all accidental overdoses over time. The chart shows somewhat steady levels between 2017 and 2015, but then has a dramatic spike around 2017, tied to the rise of fentanyl in the area. However, then it shows a dramatic decrease for 2025, likely because the year is not completely over yet. in subsequent tables I omit 2025 from here on. </p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="1000" src="images/Image-02-substance-overview.png" alt="diagram showing all of the substances listed" />
+				<figcaption>
+				Data Overview: Substances & Data Cleanup
+				<p>Next I wanted to get a handle on the scope of the substances in the data. The first step to this was combining fentanyl derivatives and fentalogs, by combining all elements with fentanyl in the name into one. This could cause some loss of nuance, such as comparing all of the versions of fentanyl, but it could be returned to later. The individual names are less important than the communication of the volume of types of substances. I noticed that there were a ton of drugs that only were present at one overdose.</p>
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="800" src="images/Image-03-substance-primary.png" alt="a horizontal bar graph showing the 24 most common primary causes of overdose" />
+				<figcaption>
+				Substance Analysis: Primary Causes
+				<p>Next I filtered the substances down to the more significant players. At this point, I was only considering the leading causes of overdose. Even with this narrowed scope, it's clear there are a handful of substances that contribute much more than the others.</p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="800" src="images/Image-04-substance-present.png" alt="a chart similar to the previous one, but this time showing all substances present at OD, not just the lead causes" />
+				<figcaption>
+				Substance Analysis: Presence at OD
+				<p>Before moving on, I used the same basic format to look at how many times each substance was present at OD, not just the lead cause. Comparing the two tables adds nuance to the understanding of the substance use. Though the overall shape is very similar, the difference between fentanyl and the other substances is even greater. Some of the findings surprised me, such as heroin being more common at OD than alcohol, even when it was not the cause. I associate alcohol more with causal use, so would have guessed it would be more common.</p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="800" src="images/image-05-age.png" alt="" />
+				<figcaption>
+				Age Analysis: Distribution
+				<p>Next I looked at age. I started with overall trends in the data, to get a sense of the hotspots. Though I could sort of see basic trends in this format, I needed more clarity about actual age range distribution. I also found a zero year old in the data, and removed them. </p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="800" src="images/image-06-age-categories.png" alt="" />
+				<figcaption>
+				Age Anaysis: Groupings
+				<p>I used the heatmap visual to help me digest the data. I also found the average age. Since it was around 40-45, I made 44-45 my mid-point in the age division. I started with a chart comparing all of the ages together, helping me see the basic distribution of ages per death in each year.</p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img width="800" src="images/image-07-age-comparison.png" alt="" />
+				<figcaption>
+				Age Analysis: Comparison
+				<p>Next, I broke the age ranges into their own tables so I could lok for differences in their overall patterns compared to the overall patterns. I was surprised by the starkness between the middle-aged adults and the young adults. I wondered if splitting up the data more would reveal more people. </p>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<!-- <img src="IMAGE_FILENAME" alt="" /> -->
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<!-- <img src="IMAGE_FILENAME" alt="" /> -->
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<!-- <img src="IMAGE_FILENAME" alt="" /> -->
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>Even though I didn't get as deep into the data and comparison as I would have liked,
+				I did glean some insights. Fentanyl plays a larger role than it would appear at first
+				glance, because even when it is not the leading cause of death, it is often a co-morbidity.
+				Even though different demographic groups are dying from substance use at different amounts, 
+				the overall shape of distribution remains the same. This likely means that substance abuse
+				has a cause tied to larger cultural events and trends rather than demographic views. Also,
+				while it's good to see that young people are dying from substances less than older ones, some 
+				in that age range would have been too young to participate during the time frame observed. the 2020-2022
+				part of the young adults graph is approaching the same values as the early part of the next age range, 
+				suggesting that their low values right now may be higher as they get older and shift into the new demographic. 
+		
+				Overall, I didn't get anywhere as far as I wanted with the analysis or exploration. I'm much 
+				more comfortable with the program now, after many days, if not weeks, of reading and trial and error, 
+				but my own programming limitations definitely hindered my ability to dig deep into the data. I hope 
+				that, now that I have more practice, I can continue to build on these skills.</p>
+		</section>
+		<div id="vis"></div>
+		<div id="vis2"></div>
+		<div id="vis3"></div>
+		<div id="vis4"></div>
+		<div id="vis5"></div>
+		<div id="vis6"></div>
+		<div id="vis7"></div>
+		<div id="vis8"></div>
+		<div id="vis9"></div>
+		<div id="vis10"></div>
+		<div id="vis11"></div>
+		<div id="vis12"></div>
+		<div id="vis13"></div>
+		<div id="vis14"></div>
+		<div id="vis15"></div>
+		<div id="vis16"></div>
+		<div id="vis17"></div>
+		<div id="vis18"></div>
+
+	</main>
+
+
+</body>
+</html>
